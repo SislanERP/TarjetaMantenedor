@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BioStarModelStoreContainer" CdmEntityContainer="BioStarEntities">
+    <EntitySetMapping Name="TB_USUARIO">
+      <EntityTypeMapping TypeName="BioStarModel.TB_USUARIO">
+        <MappingFragment StoreEntitySet="TB_USUARIO">
+          <ScalarProperty Name="USU_ID" ColumnName="USU_ID" />
+          <ScalarProperty Name="USU_NOMBRE" ColumnName="USU_NOMBRE" />
+          <ScalarProperty Name="USU_SEGUNDO_NOMBRE" ColumnName="USU_SEGUNDO_NOMBRE" />
+          <ScalarProperty Name="USU_APELLIDO_PATERNO" ColumnName="USU_APELLIDO_PATERNO" />
+          <ScalarProperty Name="USU_APELLIDO_MATERNO" ColumnName="USU_APELLIDO_MATERNO" />
+          <ScalarProperty Name="USU_RUT" ColumnName="USU_RUT" />
+          <ScalarProperty Name="USU_DV" ColumnName="USU_DV" />
+          <ScalarProperty Name="USU_DEPARTAMENTO" ColumnName="USU_DEPARTAMENTO" />
+          <ScalarProperty Name="USU_USUARIO" ColumnName="USU_USUARIO" />
+          <ScalarProperty Name="USU_CONTRASENA" ColumnName="USU_CONTRASENA" />
+          <ScalarProperty Name="USU_ROL" ColumnName="USU_ROL" />
+          <ScalarProperty Name="USU_COMENTARIO" ColumnName="USU_COMENTARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

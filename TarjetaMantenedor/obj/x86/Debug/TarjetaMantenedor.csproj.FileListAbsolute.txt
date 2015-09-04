@@ -1,0 +1,16 @@
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\bin\Debug\TarjetaMantenedor.exe
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\bin\Debug\TarjetaMantenedor.pdb
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\TarjetaMantenedor.csproj.GenerateResource.Cache
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\TarjetaMantenedor.exe
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\TarjetaMantenedor.pdb
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\TarjetaMantenedor.csprojResolveAssemblyReference.cache
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\WindowsFormsApplication1.MDIPrincipal.resources
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\bin\Debug\TarjetaMantenedor.exe.config
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\WindowsFormsApplication1.Form3.resources
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\WindowsFormsApplication1.Form4.resources
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\WindowsFormsApplication1.Form5.resources
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\WindowsFormsApplication1.Form6.resources
+C:\Users\dlorca\documents\visual studio 2010\Projects\TarjetaMantenedor\TarjetaMantenedor\obj\x86\Debug\WindowsFormsApplication1.Form7.resources

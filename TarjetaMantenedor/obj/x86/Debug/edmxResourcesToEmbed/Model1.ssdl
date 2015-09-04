@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BioStarModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BioStarModelStoreContainer">
+    <EntitySet Name="TB_USUARIO" EntityType="BioStarModel.Store.TB_USUARIO" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="TB_USUARIO">
+    <Key>
+      <PropertyRef Name="USU_ID" />
+    </Key>
+    <Property Name="USU_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USU_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_SEGUNDO_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_APELLIDO_PATERNO" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_APELLIDO_MATERNO" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_RUT" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_DV" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_DEPARTAMENTO" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_USUARIO" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_CONTRASENA" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_ROL" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_COMENTARIO" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>
