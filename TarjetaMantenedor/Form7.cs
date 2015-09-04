@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+/* en la rama desarrollo */
+
 namespace WindowsFormsApplication1
 {
     public partial class Form7 : Form
