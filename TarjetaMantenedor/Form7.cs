@@ -99,7 +99,17 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
-                            MessageBox.Show("Todo calza pollo !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            insusuariobio actualiza = new insusuariobio();
+                            string retornoctrl = actualiza.buscatar(txttarjeta.Text);
+                            if (retornoctrl == "")
+                            {
+                                //tarjeta no existe
+                            }
+                            else 
+                            {
+                                MessageBox.Show("La tarjeta ya se encuentra asignada !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            //idusuario;
                         }
                     }
                 }
