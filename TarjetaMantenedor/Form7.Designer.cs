@@ -53,6 +53,7 @@
             this.txtrut.Name = "txtrut";
             this.txtrut.Size = new System.Drawing.Size(265, 20);
             this.txtrut.TabIndex = 2;
+            this.txtrut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrut_KeyPress);
             // 
             // txttarjeta
             // 
@@ -60,9 +61,11 @@
             this.txttarjeta.Name = "txttarjeta";
             this.txttarjeta.Size = new System.Drawing.Size(265, 20);
             this.txttarjeta.TabIndex = 3;
+            this.txttarjeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttarjeta_KeyPress);
             // 
             // txtaccgrp
             // 
+            this.txtaccgrp.Enabled = false;
             this.txtaccgrp.Location = new System.Drawing.Point(172, 101);
             this.txtaccgrp.Name = "txtaccgrp";
             this.txtaccgrp.Size = new System.Drawing.Size(265, 20);
