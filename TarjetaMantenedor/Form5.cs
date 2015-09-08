@@ -39,12 +39,11 @@ namespace WindowsFormsApplication1
 
         void form7_Load(object sender, EventArgs e)
         {
-            lblsht.Text = "Formulario abierto";
+            
         }
 
         void form7_FormClosed(object sender, FormClosedEventArgs e)
         {
-            lblsht.Text = "Se ha cerrado el Formulario";
         }
 
         void form7_Disposed(object sender, EventArgs e)
