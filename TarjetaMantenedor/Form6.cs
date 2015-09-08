@@ -25,14 +25,12 @@ namespace WindowsFormsApplication1
                 idub = inser.buscatar(Convert.ToString(txttarnum.Text));
                 if (idub == "")//tarjeta no asignada
                 {
-                    txtdv.Text = Convert.ToString("t no asigned");
                     idub = inser.inserta(txtnoms.Text, txtapepat.Text, txtapemat.Text, txtrut.Text, txtdv.Text, txttarnum.Text);
                     MessageBox.Show("Usuario y tarjeta igresados correctamente !!" + idub, "En hora buena !!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 else
                 {
-                    txtdv.Text = Convert.ToString("t asignada " + idub);
                     MessageBox.Show("Usuario no existe pero la tarjeta ya esta asignada !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
