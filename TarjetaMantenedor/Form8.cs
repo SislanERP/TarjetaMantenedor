@@ -63,8 +63,11 @@ namespace WindowsFormsApplication1
         private void btnasignaga_Click(object sender, EventArgs e)
         {
             Form7 form7 = this.FormInstance7;
-            form7.grupoacceso = cmbgrpacc.Text;
-            form7.idusuario = this.idusuario;
+            insusuariobio insertaga = new insusuariobio();
+            insertaga.insertagrupoacceso(cmbgrpacc.ValueMember,this.idusuario);
+            //form7.grupoacceso = cmbgrpacc.Text;
+            //form7.idusuario = this.idusuario;
+
             form7.Show();
             this.Close();
         }

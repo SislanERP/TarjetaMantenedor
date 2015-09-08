@@ -66,7 +66,6 @@ namespace WindowsFormsApplication1
                 txtrut.Text = Convert.ToString(nombre.Rows[0][5]);
                 txttarjeta.Text = tarjeta;
                 txtaccgrp.Text = Convert.ToString(puerta.Rows[0][1]);
-                //txtaccgrp.Text = grupoacceso;
             }
             catch(IndexOutOfRangeException)
             {
