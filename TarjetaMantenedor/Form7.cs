@@ -101,18 +101,13 @@ namespace WindowsFormsApplication1
                         {
                             insusuariobio actualiza = new insusuariobio();
                             string retornoctrl = actualiza.buscatar(txttarjeta.Text);
-                            if (retornoctrl == "")
+                            if (retornoctrl == "" || retornoctrl == idusuario)
                             {
-                                //tarjeta no existe, se puede actualizar
-                                MessageBox.Show("se puede actualizar !!" + retornoctrl, "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else if (retornoctrl == idusuario)
-                            {
-                                MessageBox.Show("La tarjeta la tiene este mesmo !!" + retornoctrl, "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                actualiza.actualizaub(idusuario,txtnombre.Text,txtrut.Text,txttarjeta.Text);
                             }
                             else
                             {
-                                MessageBox.Show("La tarjeta esta asigana a otro usuario !!" + retornoctrl, "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("La tarjeta esta asigana a otro usuario !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }

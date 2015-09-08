@@ -223,12 +223,12 @@ namespace WindowsFormsApplication1
             string sard = " bien";
             try
             {
-                String consulta1 = "delete from TB_ACCESSGROUP_USER where nAgentIdn = '" + idub + "';";
+                String consulta1 = "update TB_USER set sUserName = '"+nombre+"', sUserID = '"+rut+"' where nUserIdn = '"+idub+"' ;";
                 SqlCommand sqd1 = new SqlCommand(consulta1, con1._SqlConnetion);
                 con1._SqlConnetion.Open();
                 sqd1.ExecuteNonQuery();
                 con1._SqlConnetion.Close();
-                String consulta = "Insert into TB_ACCESSGROUP_USER(nAccessIdn,nType,nAgentIdn) values('" + idub + "','1000','" + idub + "');";
+                String consulta = "update TB_USER_CARD set sCardNo = '"+tarjeta+"' where nUserIdn = '"+idub+"';";
                 SqlCommand sqd = new SqlCommand(consulta, con1._SqlConnetion);
                 con1._SqlConnetion.Open();
                 sqd.ExecuteNonQuery();
