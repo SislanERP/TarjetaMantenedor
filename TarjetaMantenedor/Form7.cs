@@ -104,6 +104,8 @@ namespace WindowsFormsApplication1
                             if (retornoctrl == "" || retornoctrl == idusuario)
                             {
                                 actualiza.actualizaub(idusuario,txtnombre.Text,txtrut.Text,txttarjeta.Text);
+                                this.Close();
+                                MessageBox.Show("Usuario actualizado correctamente !!", "Atención !!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
