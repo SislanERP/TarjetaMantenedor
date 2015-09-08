@@ -32,54 +32,45 @@
             this.txtrut = new System.Windows.Forms.TextBox();
             this.txttarjeta = new System.Windows.Forms.TextBox();
             this.txtaccgrp = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.brnactualiza = new System.Windows.Forms.Button();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblrut = new System.Windows.Forms.Label();
             this.lblnumtar = new System.Windows.Forms.Label();
             this.lblaccgrp = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnnewgrp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(172, 48);
+            this.txtnombre.Location = new System.Drawing.Point(172, 23);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(265, 20);
             this.txtnombre.TabIndex = 1;
             // 
             // txtrut
             // 
-            this.txtrut.Location = new System.Drawing.Point(172, 74);
+            this.txtrut.Location = new System.Drawing.Point(172, 49);
             this.txtrut.Name = "txtrut";
             this.txtrut.Size = new System.Drawing.Size(265, 20);
             this.txtrut.TabIndex = 2;
             // 
             // txttarjeta
             // 
-            this.txttarjeta.Location = new System.Drawing.Point(172, 100);
+            this.txttarjeta.Location = new System.Drawing.Point(172, 75);
             this.txttarjeta.Name = "txttarjeta";
             this.txttarjeta.Size = new System.Drawing.Size(265, 20);
             this.txttarjeta.TabIndex = 3;
             // 
             // txtaccgrp
             // 
-            this.txtaccgrp.Location = new System.Drawing.Point(172, 126);
+            this.txtaccgrp.Location = new System.Drawing.Point(172, 101);
             this.txtaccgrp.Name = "txtaccgrp";
             this.txtaccgrp.Size = new System.Drawing.Size(265, 20);
             this.txtaccgrp.TabIndex = 4;
             // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(172, 181);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(265, 20);
-            this.textBox6.TabIndex = 6;
-            // 
             // brnactualiza
             // 
-            this.brnactualiza.Location = new System.Drawing.Point(197, 226);
+            this.brnactualiza.Location = new System.Drawing.Point(362, 127);
             this.brnactualiza.Name = "brnactualiza";
             this.brnactualiza.Size = new System.Drawing.Size(75, 23);
             this.brnactualiza.TabIndex = 7;
@@ -90,7 +81,7 @@
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
-            this.lblnombre.Location = new System.Drawing.Point(23, 51);
+            this.lblnombre.Location = new System.Drawing.Point(23, 26);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(44, 13);
             this.lblnombre.TabIndex = 8;
@@ -99,7 +90,7 @@
             // lblrut
             // 
             this.lblrut.AutoSize = true;
-            this.lblrut.Location = new System.Drawing.Point(23, 77);
+            this.lblrut.Location = new System.Drawing.Point(23, 52);
             this.lblrut.Name = "lblrut";
             this.lblrut.Size = new System.Drawing.Size(30, 13);
             this.lblrut.TabIndex = 9;
@@ -108,7 +99,7 @@
             // lblnumtar
             // 
             this.lblnumtar.AutoSize = true;
-            this.lblnumtar.Location = new System.Drawing.Point(23, 103);
+            this.lblnumtar.Location = new System.Drawing.Point(23, 78);
             this.lblnumtar.Name = "lblnumtar";
             this.lblnumtar.Size = new System.Drawing.Size(76, 13);
             this.lblnumtar.TabIndex = 10;
@@ -117,24 +108,15 @@
             // lblaccgrp
             // 
             this.lblaccgrp.AutoSize = true;
-            this.lblaccgrp.Location = new System.Drawing.Point(23, 129);
+            this.lblaccgrp.Location = new System.Drawing.Point(23, 104);
             this.lblaccgrp.Name = "lblaccgrp";
             this.lblaccgrp.Size = new System.Drawing.Size(89, 13);
             this.lblaccgrp.TabIndex = 11;
             this.lblaccgrp.Text = "Grupo de acceso";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 184);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "label6";
-            // 
             // btnnewgrp
             // 
-            this.btnnewgrp.Location = new System.Drawing.Point(172, 152);
+            this.btnnewgrp.Location = new System.Drawing.Point(172, 127);
             this.btnnewgrp.Name = "btnnewgrp";
             this.btnnewgrp.Size = new System.Drawing.Size(100, 23);
             this.btnnewgrp.TabIndex = 14;
@@ -146,15 +128,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 261);
+            this.ClientSize = new System.Drawing.Size(449, 159);
             this.Controls.Add(this.btnnewgrp);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.lblaccgrp);
             this.Controls.Add(this.lblnumtar);
             this.Controls.Add(this.lblrut);
             this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.brnactualiza);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.txtaccgrp);
             this.Controls.Add(this.txttarjeta);
             this.Controls.Add(this.txtrut);
@@ -173,13 +153,11 @@
         private System.Windows.Forms.TextBox txtrut;
         private System.Windows.Forms.TextBox txttarjeta;
         private System.Windows.Forms.TextBox txtaccgrp;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button brnactualiza;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lblrut;
         private System.Windows.Forms.Label lblnumtar;
         private System.Windows.Forms.Label lblaccgrp;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnnewgrp;
     }
 }
