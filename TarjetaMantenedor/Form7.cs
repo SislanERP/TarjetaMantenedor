@@ -13,7 +13,8 @@ namespace WindowsFormsApplication1
 {
     public partial class Form7 : Form
     {
-        public string datz;
+        public string idusuario;
+        public string grupoacceso;
         public Form7()
         {
             InitializeComponent();
@@ -56,15 +57,16 @@ namespace WindowsFormsApplication1
         private void Form7_Load(object sender, EventArgs e)
         {
             insusuariobio datosub = new insusuariobio();
-            DataTable nombre = datosub.traerub(datz);
-            string tarjeta = datosub.buscatarpeerid(datz);
-            DataTable puerta = datosub.traepuerta(datz);
+            DataTable nombre = datosub.traerub(idusuario);
+            string tarjeta = datosub.buscatarpeerid(idusuario);
+            DataTable puerta = datosub.traepuerta(idusuario);
             try
             {
                 txtnombre.Text = Convert.ToString(nombre.Rows[0][1]);
                 txtrut.Text = Convert.ToString(nombre.Rows[0][5]);
                 txttarjeta.Text = tarjeta;
                 txtaccgrp.Text = Convert.ToString(puerta.Rows[0][1]);
+                //txtaccgrp.Text = grupoacceso;
             }
             catch(IndexOutOfRangeException)
             {
@@ -80,7 +82,9 @@ namespace WindowsFormsApplication1
         private void btnnewgrp_Click(object sender, EventArgs e)
         {
             Form8 form8 = this.FormInstance8;
+            form8.idusuario=this.idusuario;
             form8.Show();
+            this.Close();
         }
 
     }

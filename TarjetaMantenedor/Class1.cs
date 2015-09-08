@@ -194,5 +194,23 @@ namespace WindowsFormsApplication1
             sqd.Fill(ds, "matriz3");
             return ds.Tables["matriz3"];
         }
+
+        public string insertagrupoacceso(string idusuario, string idgrupo)
+        {
+            string sard = " bien";
+            try
+            {
+                String consulta = "Insert into TB_ACCESSGROUP_USER(nAccessIdn,nType,nAgentIdn) values('" + idgrupo + "','1000','" + idusuario + "');";
+                SqlCommand sqd = new SqlCommand(consulta, con1._SqlConnetion);
+                con1._SqlConnetion.Open();
+                sqd.ExecuteNonQuery();
+                con1._SqlConnetion.Close();
+            }
+            catch (Exception ex)
+            {
+                sard = ex.Message;
+            }
+            return "ok" + sard;
+        }
     }
 }

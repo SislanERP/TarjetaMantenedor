@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1
             {
                 string a = Convert.ToString(gridUsuBio.CurrentCell.Value);
                 Form7 form7 = this.FormInstance;
-                form7.datz = a;
+                form7.idusuario = a;
                 //form7.MdiParent = this.MdiParent;
                 form7.Show();
             }
