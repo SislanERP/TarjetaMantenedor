@@ -19,6 +19,40 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        Form8 form8 = null;
+
+        private Form8 FormInstance8
+        {
+            get
+            {
+                if (form8 == null)
+                {
+                    form8 = new Form8();
+                    form8.MdiParent = this.MdiParent;
+
+                    form8.Disposed += new EventHandler(form7_Disposed);
+                    form8.FormClosed += new FormClosedEventHandler(form7_FormClosed);
+                    form8.Load += new EventHandler(form7_Load);
+                }
+
+                return form8;
+            }
+        }
+
+        void form7_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        void form7_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
+
+        void form7_Disposed(object sender, EventArgs e)
+        {
+            form8 = null;
+        }
+
         private void Form7_Load(object sender, EventArgs e)
         {
             insusuariobio datosub = new insusuariobio();
@@ -45,7 +79,8 @@ namespace WindowsFormsApplication1
 
         private void btnnewgrp_Click(object sender, EventArgs e)
         {
-
+            Form8 form8 = this.FormInstance8;
+            form8.Show();
         }
 
     }

@@ -185,5 +185,14 @@ namespace WindowsFormsApplication1
             sqd.Fill(ds, "matriz3");
             return ds.Tables["matriz3"];
         }
+
+        public DataTable traergac()
+        {
+            String consulta = "Select * from TB_ACCESSGROUP;";
+            DataSet ds = new DataSet();
+            SqlDataAdapter sqd = new SqlDataAdapter(consulta, con1._SqlConnetion);
+            sqd.Fill(ds, "matriz3");
+            return ds.Tables["matriz3"];
+        }
     }
 }
