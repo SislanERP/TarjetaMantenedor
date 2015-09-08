@@ -38,6 +38,7 @@
             this.tBUSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tB_USUARIOTableAdapter = new WindowsFormsApplication1.BioStarDataSetTableAdapters.TB_USUARIOTableAdapter();
             this.tBUSUARIOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lblsht = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridUsuBio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bioStarDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBUSUARIOBindingSource)).BeginInit();
@@ -116,11 +117,21 @@
             this.tBUSUARIOBindingSource1.DataMember = "TB_USUARIO";
             this.tBUSUARIOBindingSource1.DataSource = this.bioStarDataSet;
             // 
+            // lblsht
+            // 
+            this.lblsht.AutoSize = true;
+            this.lblsht.Location = new System.Drawing.Point(527, 56);
+            this.lblsht.Name = "lblsht";
+            this.lblsht.Size = new System.Drawing.Size(35, 13);
+            this.lblsht.TabIndex = 5;
+            this.lblsht.Text = "label1";
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 343);
+            this.Controls.Add(this.lblsht);
             this.Controls.Add(this.btndesactub);
             this.Controls.Add(this.btneditub);
             this.Controls.Add(this.btnagregaub);
@@ -149,5 +160,6 @@
         private System.Windows.Forms.BindingSource tBUSUARIOBindingSource;
         private BioStarDataSetTableAdapters.TB_USUARIOTableAdapter tB_USUARIOTableAdapter;
         private System.Windows.Forms.BindingSource tBUSUARIOBindingSource1;
+        private System.Windows.Forms.Label lblsht;
     }
 }

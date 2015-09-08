@@ -36,8 +36,8 @@ namespace WindowsFormsApplication1
                 {
                     try
                     {
-                        //SqlConnection miConecion = new SqlConnection(@"Data Source=VK-I5\BSSERVER;Initial Catalog=BioStar;Integrated Security=True");
-                        SqlConnection miConecion = new SqlConnection(@"Data Source=XEN-SQL2008ENT;Initial Catalog=BioStar;Trusted_Connection=False;User Id=sisbioint;Password=qweasd");
+                        SqlConnection miConecion = new SqlConnection(@"Data Source=VK-I5\BSSERVER;Initial Catalog=BioStar;Integrated Security=True");
+                        //SqlConnection miConecion = new SqlConnection(@"Data Source=XEN-SQL2008ENT;Initial Catalog=BioStar;Trusted_Connection=False;User Id=sisbioint;Password=qweasd");
                         miConecion.Open();
                         SqlCommand consulta = new SqlCommand("Select * from tb_usuario where usu_usuario ='" + Convert.ToString(txtuser.Text) + "' and usu_contrasena ='" + Convert.ToString(txtpass.Text) + "';", miConecion);
                         int validacons = consulta.ExecuteNonQuery();
@@ -69,6 +69,11 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

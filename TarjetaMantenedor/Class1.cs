@@ -10,7 +10,8 @@ namespace WindowsFormsApplication1
     class conexionbd
     {
         //SqlConnection conexion = new SqlConnection(@"Data Source=192.168.2.246,1433;Initial Catalog=BioStar;Trusted_Connection=False;User Id=sa;Password=sql526337");
-        SqlConnection conexion = new SqlConnection(@"Data Source=XEN-SQL2008ENT;Initial Catalog=BioStar;Trusted_Connection=False;User Id=sisbioint;Password=qweasd;");
+        SqlConnection conexion = new SqlConnection(@"Data Source=VK-I5\BSSERVER;Initial Catalog=BioStar;Integrated Security=True");
+        //SqlConnection conexion = new SqlConnection(@"Data Source=XEN-SQL2008ENT;Initial Catalog=BioStar;Trusted_Connection=False;User Id=sisbioint;Password=qweasd;");
         public SqlConnection _SqlConnetion
         {
             get
