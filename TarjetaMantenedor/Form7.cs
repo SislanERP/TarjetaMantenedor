@@ -75,6 +75,35 @@ namespace WindowsFormsApplication1
 
         private void brnactualiza_Click(object sender, EventArgs e)
         {
+            if (txtnombre.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un nombre !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (txtrut.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar un rut !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (txttarjeta.Text == "")
+                    {
+                        MessageBox.Show("Debe ingresar un número de tarjeta !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        if (txtaccgrp.Text == "")
+                        {
+                            MessageBox.Show("Debe seleccionar un grupo de acceso !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Todo calza pollo !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
 
         }
 

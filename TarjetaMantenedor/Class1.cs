@@ -217,5 +217,28 @@ namespace WindowsFormsApplication1
             }
             return "ok" + sard;
         }
+
+        public string actualizaub(string nombre, string rut, string tarjeta, string grupo)
+        {
+            string sard = " bien";
+            try
+            {
+                String consulta1 = "delete from TB_ACCESSGROUP_USER where nAgentIdn = '" + grupo + "';";
+                SqlCommand sqd1 = new SqlCommand(consulta1, con1._SqlConnetion);
+                con1._SqlConnetion.Open();
+                sqd1.ExecuteNonQuery();
+                con1._SqlConnetion.Close();
+                String consulta = "Insert into TB_ACCESSGROUP_USER(nAccessIdn,nType,nAgentIdn) values('" + grupo + "','1000','" + grupo + "');";
+                SqlCommand sqd = new SqlCommand(consulta, con1._SqlConnetion);
+                con1._SqlConnetion.Open();
+                sqd.ExecuteNonQuery();
+                con1._SqlConnetion.Close();
+            }
+            catch (Exception ex)
+            {
+                sard = ex.Message;
+            }
+            return "ok" + sard;
+        }
     }
 }
