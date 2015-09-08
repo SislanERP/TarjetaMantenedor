@@ -200,6 +200,11 @@ namespace WindowsFormsApplication1
             string sard = " bien";
             try
             {
+                String consulta1 = "delete from TB_ACCESSGROUP_USER where nAgentIdn = '" + idusuario + "';";
+                SqlCommand sqd1 = new SqlCommand(consulta1, con1._SqlConnetion);
+                con1._SqlConnetion.Open();
+                sqd1.ExecuteNonQuery();
+                con1._SqlConnetion.Close();
                 String consulta = "Insert into TB_ACCESSGROUP_USER(nAccessIdn,nType,nAgentIdn) values('" + idgrupo + "','1000','" + idusuario + "');";
                 SqlCommand sqd = new SqlCommand(consulta, con1._SqlConnetion);
                 con1._SqlConnetion.Open();
