@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form5 : Form
     {
-        Form6 form6 = new Form6();
+        Form6 form6 = null;
         Form7 form7 = null;
         public Form5()
         {
@@ -30,10 +30,27 @@ namespace WindowsFormsApplication1
                     form7.Disposed += new EventHandler(form7_Disposed);
                     form7.FormClosed += new FormClosedEventHandler(form7_FormClosed);
                     form7.Load += new EventHandler(form7_Load);
-
                 }
 
                 return form7;
+            }
+        }
+
+        private Form6 FormInstance6
+        {
+            get
+            {
+                if (form6 == null)
+                {
+                    form6 = new Form6();
+                    form6.MdiParent = this.MdiParent;
+
+                    form6.Disposed += new EventHandler(form7_Disposed);
+                    form6.FormClosed += new FormClosedEventHandler(form7_FormClosed);
+                    form6.Load += new EventHandler(form7_Load);
+                }
+
+                return form6;
             }
         }
 
@@ -49,6 +66,7 @@ namespace WindowsFormsApplication1
         void form7_Disposed(object sender, EventArgs e)
         {
             form7 = null;
+            form6 = null;
         }
 
 
@@ -85,7 +103,7 @@ namespace WindowsFormsApplication1
 
         private void btnagregaub_Click(object sender, EventArgs e)
         {
-            form6.MdiParent = this.MdiParent;
+            Form6 form6 = this.FormInstance6;
             form6.Show();
         }
 

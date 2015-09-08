@@ -160,7 +160,7 @@
             this.Controls.Add(this.txtrut);
             this.Controls.Add(this.txtnombre);
             this.Name = "Form7";
-            this.Text = "Form7";
+            this.Text = "Editar usuario";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
