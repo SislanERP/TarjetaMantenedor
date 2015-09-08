@@ -13,7 +13,39 @@ namespace WindowsFormsApplication1
     {
         private int childFormNumber = 0;
 
-        Form5 formulariousuario = new Form5();
+        Form5 formulariousuario = null;
+
+        private Form5 FormInstance5
+        {
+            get
+            {
+                if (formulariousuario == null)
+                {
+                    formulariousuario = new Form5();
+                    formulariousuario.MdiParent = this.MdiParent;
+
+                    formulariousuario.Disposed += new EventHandler(form7_Disposed);
+                    formulariousuario.FormClosed += new FormClosedEventHandler(form7_FormClosed);
+                    formulariousuario.Load += new EventHandler(form7_Load);
+                }
+
+                return formulariousuario;
+            }
+        }
+
+        void form7_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        void form7_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
+
+        void form7_Disposed(object sender, EventArgs e)
+        {
+            formulariousuario = null;
+        }
 
         public MDIPrincipal()
         {
@@ -117,7 +149,7 @@ namespace WindowsFormsApplication1
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formulariousuario.MdiParent = this;
+            Form5 formulariousuario = this.FormInstance5;
             formulariousuario.Show();
         }
 
