@@ -103,13 +103,17 @@ namespace WindowsFormsApplication1
                             string retornoctrl = actualiza.buscatar(txttarjeta.Text);
                             if (retornoctrl == "")
                             {
-                                //tarjeta no existe
+                                //tarjeta no existe, se puede actualizar
+                                MessageBox.Show("se puede actualizar !!" + retornoctrl, "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            else 
+                            else if (retornoctrl == idusuario)
                             {
-                                MessageBox.Show("La tarjeta ya se encuentra asignada !!", "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("La tarjeta la tiene este mesmo !!" + retornoctrl, "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            //idusuario;
+                            else
+                            {
+                                MessageBox.Show("La tarjeta esta asigana a otro usuario !!" + retornoctrl, "Alerta !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
