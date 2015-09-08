@@ -64,10 +64,8 @@ namespace WindowsFormsApplication1
         {
             Form7 form7 = this.FormInstance7;
             insusuariobio insertaga = new insusuariobio();
-            insertaga.insertagrupoacceso(cmbgrpacc.ValueMember,this.idusuario);
-            //form7.grupoacceso = cmbgrpacc.Text;
-            //form7.idusuario = this.idusuario;
-
+            string arg = insertaga.insertagrupoacceso(this.idusuario,cmbgrpacc.SelectedValue.ToString());
+            form7.idusuario = this.idusuario;
             form7.Show();
             this.Close();
         }
