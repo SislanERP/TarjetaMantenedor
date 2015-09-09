@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+        public string idubmain;
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
@@ -56,6 +57,7 @@ namespace WindowsFormsApplication1
                             MDIPrincipal formu2 = new MDIPrincipal();
                             DR = ds.Tables["Tblusuario"].Rows[0];
                             lblmsg.Text = Convert.ToString("Bienvenido " + DR["usu_nombre"] + " !!");
+                            idubmain = Convert.ToString(DR["usu_id"]);
                             lblmsg.Visible = true;
                             System.Threading.Thread.Sleep(1000);
                             formu2.Show();
