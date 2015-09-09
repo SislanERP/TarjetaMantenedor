@@ -148,10 +148,18 @@ namespace WindowsFormsApplication1
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            Form5 formulariousuario = this.FormInstance5;
-            formulariousuario.idusmain = this.iduspaso;
-            formulariousuario.Show();
+            validaform validaact = new validaform();
+            string paramfrm = validaact.buscaform(this.idadministrador, this.iduspaso);
+            if (paramfrm == "")
+            {
+                MessageBox.Show("Usted no tiene autorización para realizar esta acción, por favor comuniquese con el administrador del sistema.", "Advertencia !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Form5 formulariousuario = this.FormInstance5;
+                formulariousuario.idusmain = this.iduspaso;
+                formulariousuario.Show();
+            }
         }
 
         private void MDIPrincipal_Load(object sender, EventArgs e)
