@@ -39,6 +39,7 @@
             this.tB_USUARIOTableAdapter = new WindowsFormsApplication1.BioStarDataSetTableAdapters.TB_USUARIOTableAdapter();
             this.tBUSUARIOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnactub = new System.Windows.Forms.Button();
+            this.btnrefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridUsuBio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bioStarDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBUSUARIOBindingSource)).BeginInit();
@@ -128,11 +129,22 @@
             this.btnactub.UseVisualStyleBackColor = true;
             this.btnactub.Click += new System.EventHandler(this.btnactub_Click);
             // 
+            // btnrefresh
+            // 
+            this.btnrefresh.Location = new System.Drawing.Point(337, 56);
+            this.btnrefresh.Name = "btnrefresh";
+            this.btnrefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnrefresh.TabIndex = 6;
+            this.btnrefresh.Text = "Actualizar";
+            this.btnrefresh.UseVisualStyleBackColor = true;
+            this.btnrefresh.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 343);
+            this.Controls.Add(this.btnrefresh);
             this.Controls.Add(this.btnactub);
             this.Controls.Add(this.btndesactub);
             this.Controls.Add(this.btneditub);
@@ -163,5 +175,6 @@
         private BioStarDataSetTableAdapters.TB_USUARIOTableAdapter tB_USUARIOTableAdapter;
         private System.Windows.Forms.BindingSource tBUSUARIOBindingSource1;
         private System.Windows.Forms.Button btnactub;
+        private System.Windows.Forms.Button btnrefresh;
     }
 }

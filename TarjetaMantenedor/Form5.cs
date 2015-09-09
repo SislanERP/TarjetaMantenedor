@@ -71,11 +71,8 @@ namespace WindowsFormsApplication1
             form6 = null;
         }
 
-
-
-        private void Form5_Load(object sender, EventArgs e)
+        public void cargagrid()
         {
-           this.tB_USUARIOTableAdapter.Fill(this.bioStarDataSet.TB_USUARIO);
             tblusuariobio tbuser = new tblusuariobio();
             DataTable dt = tbuser.Datos2();
             if (dt != null)
@@ -100,6 +97,12 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show("No Hay Datos !!!!");
             }
+        }
+
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            this.cargagrid();
         }
 
         private void btnagregaub_Click(object sender, EventArgs e)
@@ -191,6 +194,11 @@ namespace WindowsFormsApplication1
                     MessageBox.Show("Seleccione el id del registro que desea modificar", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.cargagrid();
         }
 
     }

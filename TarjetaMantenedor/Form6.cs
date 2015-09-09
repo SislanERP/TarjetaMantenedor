@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
                 if (idub == "")//tarjeta no asignada
                 {
                     idub = inser.inserta(txtnoms.Text, txtapepat.Text, txtapemat.Text, txtrut.Text, txtdv.Text, txttarnum.Text);
-                    MessageBox.Show("Usuario y tarjeta igresados correctamente !!" + idub, "En hora buena !!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario y tarjeta igresados correctamente !!", "En hora buena !!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 else
@@ -37,7 +37,6 @@ namespace WindowsFormsApplication1
             else//usuario ya existe
             {
                 MessageBox.Show("Usuario ya existe !!","Alerta !!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                txtdv.Text = Convert.ToString("nopes");
             }
 
         }
