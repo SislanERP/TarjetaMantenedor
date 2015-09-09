@@ -46,7 +46,6 @@ namespace WindowsFormsApplication1
                 {
                     form6 = new Form6();
                     form6.MdiParent = this.MdiParent;
-
                     form6.Disposed += new EventHandler(form7_Disposed);
                     form6.FormClosed += new FormClosedEventHandler(form7_FormClosed);
                     form6.Load += new EventHandler(form7_Load);
@@ -116,7 +115,9 @@ namespace WindowsFormsApplication1
             else
             {
                 Form6 form6 = this.FormInstance6;
+                form6.iduspaso = this.idusmain;
                 form6.Show();
+                this.Close();
             }
         }
 
@@ -195,11 +196,5 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.cargagrid();
-        }
-
     }
 }
