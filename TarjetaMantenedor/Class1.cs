@@ -277,4 +277,26 @@ namespace WindowsFormsApplication1
             return "ok" + sard;
         }
     }
+
+    class validaform
+    {
+        WindowsFormsApplication1.conexionbd con1 = new WindowsFormsApplication1.conexionbd();
+        string salida;
+        public string buscaform(string idform, string idusuario)
+        {
+            String consulta = "select f.REC_ID from TB_USUARIO a left join TB_ROL b on a.USU_ROL=b.ROL_ID left join TB_ROL_PER c on b.ROL_ID=c.PS1_ID_ROL left join TB_PERFIL d on c.PS1_ID_PER=d.PER_ID left join TB_PER_REC e on d.PER_ID=e.PS1_ID_PER left join TB_RECURSO f on e.PS1_ID_REC=f.REC_ID where a.USU_ID = '"+idusuario+"' and f.REC_ID='"+idform+"';";
+            SqlCommand sqd = new SqlCommand(consulta, con1._SqlConnetion);
+            try
+            {
+                con1._SqlConnetion.Open();
+                salida = Convert.ToString(sqd.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                salida = Convert.ToString(ex.Message);
+            }
+            con1._SqlConnetion.Close();
+            return salida;
+        }
+    }
 }

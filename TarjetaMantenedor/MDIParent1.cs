@@ -12,10 +12,8 @@ namespace WindowsFormsApplication1
     public partial class MDIPrincipal : Form
     {
         private int childFormNumber = 0;
-
         Form5 formulariousuario = null;
-
-        public string idadministrador = "6";
+        public string idadministrador = "6",iduspaso;
 
         private Form5 FormInstance5
         {
@@ -37,7 +35,6 @@ namespace WindowsFormsApplication1
 
         void form7_Load(object sender, EventArgs e)
         {
-
         }
 
         void form7_FormClosed(object sender, FormClosedEventArgs e)
@@ -153,6 +150,7 @@ namespace WindowsFormsApplication1
         {
 
             Form5 formulariousuario = this.FormInstance5;
+            formulariousuario.idusmain = this.iduspaso;
             formulariousuario.Show();
         }
 

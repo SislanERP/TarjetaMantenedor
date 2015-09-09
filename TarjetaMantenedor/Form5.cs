@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        public string idagrega="1", idedita="2", iddesactiva="4", idactiva="5";
+        public string idagrega="1", idedita="2", iddesactiva="4", idactiva="5",idusmain;
 
         private Form7 FormInstance
         {
@@ -75,7 +75,6 @@ namespace WindowsFormsApplication1
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bioStarDataSet.TB_USUARIO' Puede moverla o quitarla según sea necesario.
            this.tB_USUARIOTableAdapter.Fill(this.bioStarDataSet.TB_USUARIO);
             tblusuariobio tbuser = new tblusuariobio();
             DataTable dt = tbuser.Datos2();
@@ -105,56 +104,92 @@ namespace WindowsFormsApplication1
 
         private void btnagregaub_Click(object sender, EventArgs e)
         {
-            Form6 form6 = this.FormInstance6;
-            form6.Show();
+            validaform validaact = new validaform();
+            string paramfrm = validaact.buscaform(this.idagrega, this.idusmain);
+            if (paramfrm == "")
+            {
+                MessageBox.Show("Usted no tiene autorización para realizar esta acción, por favor comuniquese con el administrador del sistema.", "Advertencia !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Form6 form6 = this.FormInstance6;
+                form6.Show();
+            }
         }
 
         private void btneditub_Click(object sender, EventArgs e)
         {
-            string columnaid = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
-            if (columnaid == "0")
+            validaform validaact = new validaform();
+            string paramfrm = validaact.buscaform(this.idedita, this.idusmain);
+            if (paramfrm == "")
             {
-                string idusuariobio = Convert.ToString(gridUsuBio.CurrentCell.Value);
-                Form7 form7 = this.FormInstance;
-                form7.idusuario = idusuariobio;
-                //form7.MdiParent = this.MdiParent;
-                form7.Show();
+                MessageBox.Show("Usted no tiene autorización para realizar esta acción, por favor comuniquese con el administrador del sistema.", "Advertencia !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Seleccione el id del registro que desea modificar", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string columnaid = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
+                if (columnaid == "0")
+                {
+                    string idusuariobio = Convert.ToString(gridUsuBio.CurrentCell.Value);
+                    Form7 form7 = this.FormInstance;
+                    form7.idusuario = idusuariobio;
+                    //form7.MdiParent = this.MdiParent;
+                    form7.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione el id del registro que desea modificar", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void btndesactub_Click(object sender, EventArgs e)
         {
-            string columnaidb = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
-            if (columnaidb == "0")
+            validaform validaact = new validaform();
+            string paramfrm = validaact.buscaform(this.iddesactiva, this.idusmain);
+            if (paramfrm == "")
             {
-                string idusuariobiob = Convert.ToString(gridUsuBio.CurrentCell.Value);
-                insusuariobio desact = new insusuariobio();
-                string revisa = desact.desactivaub(idusuariobiob);
-                MessageBox.Show("Usuario desactivado exitosamente", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Usted no tiene autorización para realizar esta acción, por favor comuniquese con el administrador del sistema.", "Advertencia !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Seleccione el id del registro que desea modificar", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string columnaidb = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
+                if (columnaidb == "0")
+                {
+                    string idusuariobiob = Convert.ToString(gridUsuBio.CurrentCell.Value);
+                    insusuariobio desact = new insusuariobio();
+                    string revisa = desact.desactivaub(idusuariobiob);
+                    MessageBox.Show("Usuario desactivado exitosamente", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione el id del registro que desea modificar", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void btnactub_Click(object sender, EventArgs e)
         {
-            string columnaidc = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
-            if (columnaidc == "0")
+            validaform validaact = new validaform();
+            string paramfrm = validaact.buscaform(this.idactiva, this.idusmain);
+            if (paramfrm == "")
             {
-                string idusuariobioc = Convert.ToString(gridUsuBio.CurrentCell.Value);
-                insusuariobio desact = new insusuariobio();
-                string revisab = desact.activaub(idusuariobioc);
-                MessageBox.Show("Usuario activado exitosamente" + revisab, "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Usted no tiene autorización para realizar esta acción, por favor comuniquese con el administrador del sistema.", "Advertencia !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Seleccione el id del registro que desea modificar", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string columnaidc = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
+                if (columnaidc == "0")
+                {
+                    string idusuariobioc = Convert.ToString(gridUsuBio.CurrentCell.Value);
+                    insusuariobio desact = new insusuariobio();
+                    string revisab = desact.activaub(idusuariobioc);
+                    MessageBox.Show("Usuario activado exitosamente", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione el id del registro que desea modificar", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
