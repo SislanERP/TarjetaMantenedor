@@ -133,9 +133,9 @@
             // 
             this.btnrefresh.Location = new System.Drawing.Point(337, 56);
             this.btnrefresh.Name = "btnrefresh";
-            this.btnrefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnrefresh.Size = new System.Drawing.Size(103, 23);
             this.btnrefresh.TabIndex = 6;
-            this.btnrefresh.Text = "Actualizar";
+            this.btnrefresh.Text = "Actualizar tabla";
             this.btnrefresh.UseVisualStyleBackColor = true;
             this.btnrefresh.Click += new System.EventHandler(this.button1_Click);
             // 
