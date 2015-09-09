@@ -109,14 +109,30 @@ namespace WindowsFormsApplication1
 
         private void btneditub_Click(object sender, EventArgs e)
         {
-            string b = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
-            if(b == "0")
+            string columnaid = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
+            if (columnaid == "0")
             {
-                string a = Convert.ToString(gridUsuBio.CurrentCell.Value);
+                string idusuariobio = Convert.ToString(gridUsuBio.CurrentCell.Value);
                 Form7 form7 = this.FormInstance;
-                form7.idusuario = a;
+                form7.idusuario = idusuariobio;
                 //form7.MdiParent = this.MdiParent;
                 form7.Show();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el id del registro que desea modificar", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btndesactub_Click(object sender, EventArgs e)
+        {
+            string columnaidb = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
+            if (columnaidb == "0")
+            {
+                string idusuariobiob = Convert.ToString(gridUsuBio.CurrentCell.Value);
+                insusuariobio desact = new insusuariobio();
+                string revisa = desact.desactivaub(idusuariobiob);
+                MessageBox.Show("Usuario actualizado exitosamente" + revisa, "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

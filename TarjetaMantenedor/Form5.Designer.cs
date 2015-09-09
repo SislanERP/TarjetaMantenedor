@@ -96,6 +96,7 @@
             this.btndesactub.TabIndex = 4;
             this.btndesactub.Text = "Desactivar";
             this.btndesactub.UseVisualStyleBackColor = true;
+            this.btndesactub.Click += new System.EventHandler(this.btndesactub_Click);
             // 
             // bioStarDataSet
             // 

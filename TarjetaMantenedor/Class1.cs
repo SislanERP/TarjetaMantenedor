@@ -240,5 +240,23 @@ namespace WindowsFormsApplication1
             }
             return "ok" + sard;
         }
+
+        public string desactivaub(string idub)
+        {
+            string sard = " bien";
+            try
+            {
+                String consulta1 = "update TB_USER set nEndDate = '946684800' where nUserIdn = '" + idub + "' ;";
+                SqlCommand sqd1 = new SqlCommand(consulta1, con1._SqlConnetion);
+                con1._SqlConnetion.Open();
+                sqd1.ExecuteNonQuery();
+                con1._SqlConnetion.Close();
+            }
+            catch (Exception ex)
+            {
+                sard = ex.Message;
+            }
+            return "ok" + sard;
+        }
     }
 }
