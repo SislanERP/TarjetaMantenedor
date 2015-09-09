@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
 
         Form5 formulariousuario = null;
 
+        public string idadministrador = "6";
+
         private Form5 FormInstance5
         {
             get
@@ -149,6 +151,7 @@ namespace WindowsFormsApplication1
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             Form5 formulariousuario = this.FormInstance5;
             formulariousuario.Show();
         }

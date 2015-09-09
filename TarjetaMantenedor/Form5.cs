@@ -18,6 +18,8 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        public string idagrega="1", idedita="2", iddesactiva="4", idactiva="5";
+
         private Form7 FormInstance
         {
             get
