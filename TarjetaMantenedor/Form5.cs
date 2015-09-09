@@ -132,7 +132,7 @@ namespace WindowsFormsApplication1
                 string idusuariobiob = Convert.ToString(gridUsuBio.CurrentCell.Value);
                 insusuariobio desact = new insusuariobio();
                 string revisa = desact.desactivaub(idusuariobiob);
-                MessageBox.Show("Usuario desactivado exitosamente" + revisa, "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Usuario desactivado exitosamente" + revisa, "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
@@ -147,8 +147,8 @@ namespace WindowsFormsApplication1
             {
                 string idusuariobioc = Convert.ToString(gridUsuBio.CurrentCell.Value);
                 insusuariobio desact = new insusuariobio();
-                string revisab = desact.desactivaub(idusuariobioc);
-                MessageBox.Show("Usuario activado exitosamente" + revisab, "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                string revisab = desact.activaub(idusuariobioc);
+                MessageBox.Show("Usuario activado exitosamente" + revisab, "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {

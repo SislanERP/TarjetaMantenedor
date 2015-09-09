@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
                 if (formulariousuario == null)
                 {
                     formulariousuario = new Form5();
-                    formulariousuario.MdiParent = this.MdiParent;
+                    formulariousuario.MdiParent = this;
 
                     formulariousuario.Disposed += new EventHandler(form7_Disposed);
                     formulariousuario.FormClosed += new FormClosedEventHandler(form7_FormClosed);
