@@ -91,7 +91,7 @@
             // 
             // btndesactub
             // 
-            this.btndesactub.Location = new System.Drawing.Point(256, 58);
+            this.btndesactub.Location = new System.Drawing.Point(256, 56);
             this.btndesactub.Name = "btndesactub";
             this.btndesactub.Size = new System.Drawing.Size(75, 23);
             this.btndesactub.TabIndex = 4;
