@@ -132,7 +132,23 @@ namespace WindowsFormsApplication1
                 string idusuariobiob = Convert.ToString(gridUsuBio.CurrentCell.Value);
                 insusuariobio desact = new insusuariobio();
                 string revisa = desact.desactivaub(idusuariobiob);
-                MessageBox.Show("Usuario actualizado exitosamente" + revisa, "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario desactivado exitosamente" + revisa, "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el id del registro que desea modificar", "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnactub_Click(object sender, EventArgs e)
+        {
+            string columnaidc = Convert.ToString(gridUsuBio.CurrentCell.ColumnIndex);
+            if (columnaidc == "0")
+            {
+                string idusuariobioc = Convert.ToString(gridUsuBio.CurrentCell.Value);
+                insusuariobio desact = new insusuariobio();
+                string revisab = desact.desactivaub(idusuariobioc);
+                MessageBox.Show("Usuario activado exitosamente" + revisab, "Pregunta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
